@@ -24,10 +24,12 @@ pipeline{
             steps {
                 dir("demo") {
                 script {
-                    // build
-                    bat "docker build -t martiny21/prestabanco-backend:latest ."
-                    // push the image
-                    bat "docker push martiny21/prestabanco-backend:latest"
+                    withDockerRegistry(credentialsId: 'docker-credentials'){
+                        // build
+                        bat "docker build -t martiny21/prestabanco-backend:latest ."
+                        // push the image
+                        bat "docker push martiny21/prestabanco-backend:latest"
+                    }
             }
         }
     }
