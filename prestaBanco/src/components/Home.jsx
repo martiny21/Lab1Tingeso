@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TextField, Button, Container, Typography, Box, FormHelperText } from "@mui/material";
-import { useNavigate } from "react-router-dom"; // Asegúrate de importar useNavigate
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [rut, setRut] = useState(""); // Estado inicial vacío para RUT

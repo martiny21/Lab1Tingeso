@@ -23,17 +23,17 @@ pipeline{
         stage("Build and Push Docker Image") {
             steps {
                 dir("Monolitic project/demo") {
-                script {
-                    withDockerRegistry(credentialsId: 'id-credential'){
-                        // build
-                        bat "docker build -t martiny21/prestabanco-backend ."
-                        // push the image
-                        bat "docker push martiny21/prestabanco-backend"
+                    script {
+                        withDockerRegistry(credentialsId: 'id-credential'){
+                            // build
+                            bat "docker build -t martiny21/prestabanco-backend ."
+                            // push the image
+                            bat "docker push martiny21/prestabanco-backend"
+                        }
                     }
+                }
             }
         }
-    }
-}
 
     }
 }

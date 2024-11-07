@@ -65,7 +65,7 @@ const Client = () => {
         />
 
         <Button variant="contained" color="primary" onClick={calculateMonthlyPayment} sx={{ marginTop: "1rem" }}>
-          Calcular Cuota Mensual
+          Calcular Cuota Chile
         </Button>
 
         {monthlyPayment && (
