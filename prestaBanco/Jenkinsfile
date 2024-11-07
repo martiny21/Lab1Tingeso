@@ -15,8 +15,8 @@ pipeline{
                 dir("prestaBanco"){
                     script{
                          withDockerRegistry(credentialsId: 'id-credential'){
-                            bat "docker build -t martiny21/prestabanco-frontend ."
-                            bat "docker push martiny21/prestabanco-frontend"
+                            bat "docker build --no-cache -t martiny21/prestabanco-frontend:latest ."
+                            bat "docker push martiny21/prestabanco-frontend:latest"
                         }
                     }                    
                 }
