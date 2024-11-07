@@ -8,21 +8,21 @@ pipeline{
         stage("Build JAR File"){
             steps{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/martiny21/Lab1Tingeso']])
-                dir("demo"){
+                dir("Monolitic project/demo"){
                     bat "mvn clean install"
                 }
             }
         }
         stage("Test"){
             steps{
-                dir("demo"){
+                dir("Monolitic project/demo"){
                     bat "mvn test"
                 }
             }
         }        
         stage("Build and Push Docker Image") {
             steps {
-                dir("demo") {
+                dir("Monolitic project/demo") {
                 script {
                     withDockerRegistry(credentialsId: 'docker-credentials'){
                         // build
