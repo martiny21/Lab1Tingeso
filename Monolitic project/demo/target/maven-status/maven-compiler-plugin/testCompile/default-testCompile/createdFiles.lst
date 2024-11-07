@@ -1,7 +1,4 @@
-com\example\demo\repositories\DocumentTest.class
-com\example\demo\DemoApplicationTests.class
-com\example\demo\services\UserServiceTest.class
-com\example\demo\services\LoanServiceTest.class
 com\example\demo\services\RequestServiceTest.class
 com\example\demo\services\DocumentServiceTest.class
-com\example\demo\repositories\UserRepositoryTest.class
+com\example\demo\services\UserServiceTest.class
+com\example\demo\services\LoanServiceTest.class
