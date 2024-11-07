@@ -7,6 +7,8 @@ pipeline{
     environment {
         DB_HOST = 'localhost'  // Cambia esto por la IP o nombre del contenedor de la base de datos
         DB_PORT = '3306'  // Cambia esto por el puerto que estés usando para la base de datos
+        DB_USERNAME = 'root'
+        DB_PASSWORD = 'N0fum4r4S.'
     }
     stages{
         stage("Build JAR File"){
